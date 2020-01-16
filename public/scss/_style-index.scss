@@ -1,0 +1,79 @@
+.in {
+  height: 100%;
+
+  #container-col {
+    height: 100%;
+  }
+
+  #col-lissajous, #col-redesign, #col-game {
+    color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #col-lissajous {
+    background-color: #2E66A8;
+
+    &:hover {
+      background-color: #FFFFFF;
+
+      a {
+        color: #2E66A8;
+      }
+    }
+
+    a {
+      color: #FFFFFF;
+      text-decoration: none;
+      text-align: center;
+      font-size: 2em;
+      line-height: 3em
+    }
+  }
+
+  #col-redesign {
+    background-color: #4392F1;
+
+    &:hover {
+      background-color: #FFFFFF;
+
+      a {
+        color: #4392F1;
+      }
+    }
+
+    a {
+      color: #FFFFFF;
+      text-decoration: none;
+      text-align: center;
+      font-size: 2em;
+      line-height: 3em
+    }
+  }
+
+  #col-game {
+    background-color: #7BB2F5;
+
+    &:hover {
+      background-color: #FFFFFF;
+
+      a {
+        color: #7BB2F5;
+      }
+    }
+
+    a {
+      color: #FFFFFF;
+      text-decoration: none;
+      text-align: center;
+      font-size: 2em;
+      line-height: 3em
+    }
+  }
+
+}

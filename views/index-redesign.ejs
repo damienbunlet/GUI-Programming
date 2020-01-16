@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en" class="in">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+  <script src="https://kit.fontawesome.com/c55ffa2d10.js" crossorigin="anonymous"></script>
+</head>
+<body class="cm">
+
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="btn-close" onclick="closeNav()">&times;</a>
+
+    <!-- Accueil -->
+    <a href="/redesign">Accueil</a>
+
+    <!-- Moto GP -->
+    <button name="moto-gp" class="btn-dropdown">
+      Moto GP <i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="/redesign/motogp/actualites">Actualités</a>
+      <a href="/redesign/motogp/calendrier">Calendrier</a>
+      <a href="/redesign/motogp/resultats">Résultats</a>
+      <a href="/redesign/motogp/classement">Classement</a>
+      <a href="/redesign/motogp/pilotes">Pilotes</a>
+      <a href="/redesign/motogp/teams">Teams</a>
+      <a href="/redesign/motogp/circuits">Circuits</a>
+    </div>
+
+    <!-- Moto 2 -->
+    <button name="moto-2" class="btn-dropdown">
+      Moto 2 <i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="/redesign/moto2/actualites">Actualités</a>
+      <a href="/redesign/moto2/calendrier">Calendrier</a>
+      <a href="/redesign/moto2/resultats">Résultats</a>
+      <a href="/redesign/moto2/classement">Classement</a>
+      <a href="/redesign/moto2/pilotes">Pilotes</a>
+      <a href="/redesign/moto2/teams">Teams</a>
+      <a href="/redesign/moto2/circuits">Circuits</a>
+    </div>
+
+    <!-- Moto 3 -->
+    <button name="moto-3" class="btn-dropdown">
+      Moto 3 <i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="/redesign/moto3/actualites">Actualités</a>
+      <a href="/redesign/moto3/calendrier">Calendrier</a>
+      <a href="/redesign/moto3/resultats">Résultats</a>
+      <a href="/redesign/moto3/classement">Classement</a>
+      <a href="/redesign/moto3/pilotes">Pilotes</a>
+      <a href="/redesign/moto3/teams">Teams</a>
+      <a href="/redesign/moto3/circuits">Circuits</a>
+    </div>
+
+    <!-- Moto 3 -->
+    <button name="moto-e" class="btn-dropdown">
+      Moto E <i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="/redesign/motoe/actualites">Actualités</a>
+      <a href="/redesign/motoe/calendrier">Calendrier</a>
+      <a href="/redesign/motoe/resultats">Résultats</a>
+      <a href="/redesign/motoe/classement">Classement</a>
+      <a href="/redesign/motoe/circuits">Circuits</a>
+    </div>
+
+    <!-- Rookies Cup -->
+    <button name="rookies-cup" class="btn-dropdown">
+      Rookies Cup <i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="/redesign/motoe/actualites">Actualités</a>
+      <a href="/redesign/motoe/calendrier">Calendrier</a>
+      <a href="/redesign/motoe/resultats">Résultats</a>
+      <a href="/redesign/motoe/classement">Classement</a>
+    </div>
+
+    <!-- WSBK -->
+    <button name="wsbk" class="btn-dropdown">
+      WSBK <i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="/redesign/wsbk/actualites">Actualités</a>
+      <a href="/redesign/wsbk/calendrier">Calendrier</a>
+      <a href="/redesign/wsbk/resultats">Résultats</a>
+      <a href="/redesign/wsbk/classement">Classement</a>
+      <a href="/redesign/wsbk/pilotes">Pilotes</a>
+      <a href="/redesign/wsbk/teams">Teams</a>
+      <a href="/redesign/wsbk/circuits">Circuits</a>
+    </div>
+
+    <!-- WSSP -->
+    <button name="wssp" class="btn-dropdown">
+      WSSP <i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="/redesign/wssp/actualites">Actualités</a>
+      <a href="/redesign/wssp/calendrier">Calendrier</a>
+      <a href="/redesign/wssp/resultats">Résultats</a>
+      <a href="/redesign/wssp/classement">Classement</a>
+      <a href="/redesign/wssp/pilotes">Pilotes</a>
+      <a href="/redesign/wssp/teams">Teams</a>
+      <a href="/redesign/wssp/circuits">Circuits</a>
+    </div>
+
+    <!-- EWC -->
+    <button name="ewc" class="btn-dropdown">
+      EWC <i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="/redesign/ewc/actualites">Actualités</a>
+      <a href="/redesign/ewc/calendrier">Calendrier</a>
+      <a href="/redesign/ewc/resultats">Résultats</a>
+      <a href="/redesign/ewc/classement">Classement</a>
+      <a href="/redesign/ewc/pilotes">Pilotes</a>
+      <a href="/redesign/ewc/teams">Teams</a>
+      <a href="/redesign/ewc/circuits">Circuits</a>
+    </div>
+
+    <!-- Tourist trophy -->
+    <a href="/redesign/tourist-trophy">Tourist Trophy</a>
+
+    <!-- Tout Terrain -->
+    <a href="/redesign/tout-terrain">Tout Terrain</a>
+
+    <!-- Autre -->
+    <button name="autre" class="btn-dropdown">
+      Autre <i class="fas fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="/redesign/autre/france">France</a>
+      <a href="/redesign/autre/belgique">Belgique</a>
+      <a href="/redesign/autre/suisse">Suisse</a>
+    </div>
+
+    <!-- Videos -->
+    <a href="/redesign/video">Vidéos</a>
+
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="title">
+        <h2><span class="yellow">Cyber</span>motard<span class="lowercase">.com</span></h2>
+        <p>La compétition moto par la photo</p>
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <div id="myNavbar" class="navbar">
+      <span class="btn-menu" onclick="openNav()"><i class="fas fa-bars fa-lg"></i> Menu</span>
+      <div class="search-container">
+        <form action="">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-8">
+          <div class="content-title">
+            <span>Les dernières actualités</span>
+          </div>
+          <div class="divider-yellow"></div>
+
+          <div class="article row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-img">
+              <a class="link-img" href="/redesign/01"><div class="article-img" style="background-image:url(img/01.jpg)"></div></a>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-content">
+              <a class="article-title" href="/redesign/01"><h2>Zarco chez Ducati "Avintia", c'est "presque" fait !</h2></a>
+              <span class="article-info"><i class="fas fa-calendar-alt"></i>21 Novembre 2019 - Thierry Leconte</span>
+              <ul class="article-tags">
+                <li><a href="#" class="tag">MotoGP</a></li>
+                <li><a href="#" class="tag">Actualités</a></li>
+                <li><a href="#" class="tag">Zarco</a></li>
+              </ul>
+              <p class="article-summary">Les rumeurs assourdissantes qui se répandent dans les box du MotoGP, et qui font état de l’arrivée "imminente" de Johann Zarco chez Avintia Ducati, ne sont pas dénuées de fondement. Bien au contraire !</p>
+            </div>
+          </div>
+
+          <div class="article row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-img">
+              <div class="article-img" style="background-image:url(img/02.jpg)"></div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-content">
+              <h2>Honda s'offe une double tête d'affiche pour 2020</h2>
+              <span class="article-info"><i class="fas fa-calendar-alt"></i>19 Novembre 2019 - Thierry Leconte</span>
+              <ul class="article-tags">
+                <li><a href="#" class="tag">MotoGP</a></li>
+                <li><a href="#" class="tag">Moto2</a></li>
+                <li><a href="#" class="tag">Actualités</a></li>
+                <li><a href="#" class="tag">Marquez</a></li>
+              </ul>
+              <p class="article-summary">Le team Honda Repsol a tranché : le futur de la saison motoGP 2020 se fera avec une double tête d’affiche, celle des frères Marquez ! Un pari gagnant en termes d’audience !</p>
+            </div>
+          </div>
+
+          <div class="article row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-img">
+              <div class="article-img" style="background-image:url(img/03.jpg)"></div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-content">
+              <h2>Marquez a son Zénith lors de la finale motoGP de Valencia</h2>
+              <span class="article-info"><i class="fas fa-images"></i><i class="fas fa-calendar-alt"></i>17 Novembre 2019 - Thierry Leconte</span>
+              <ul class="article-tags">
+                <li><a href="#" class="tag">MotoGP</a></li>
+                <li><a href="#" class="tag">Actualités</a></li>
+                <li><a href="#" class="tag">Marquez</a></li>
+              </ul>
+              <p class="article-summary">Malgré sa 6e pole position de la saison 2019, Fabio Quartararo n’a rien pu faire contre la machine à gagner : Marc Marquez</p>
+            </div>
+          </div>
+
+          <div class="article row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-img">
+              <div class="article-img" style="background-image:url(img/04.jpg)"></div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-content">
+              <h2>Qui pour remplacer Jorge Lorenzo chez Honda ?</h2>
+              <span class="article-info"><i class="fas fa-calendar-alt"></i>15 Novembre 2019 - Thierry Leconte</span>
+              <ul class="article-tags">
+                <li><a href="#" class="tag">MotoGP</a></li>
+                <li><a href="#" class="tag">Actualités</a></li>
+                <li><a href="#" class="tag">Lorenzo</a></li>
+              </ul>
+              <p class="article-summary">Le team Honda Repsol a tranché : le futur de la saison motoGP 2020 se fera avec une double tête d’affiche, celle des frères Marquez ! Un pari gagnant en termes d’audience !</p>
+            </div>
+          </div>
+
+          <div class="article row">
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3 col-img">
+              <div class="article-img" style="background-image:url(img/05.jpg)"></div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9 col-content">
+              <h2>La galerie photos de la finale side-car 2019 à Brands Hatch</h2>
+              <span class="article-info"><i class="fas fa-images"></i><i class="fas fa-calendar-alt"></i>7 Novembre 2019 - Thierry Leconte</span>
+              <ul class="article-tags">
+                <li><a href="#" class="tag">Actualités</a></li>
+              </ul>
+              <p class="article-summary">Retour sur la finale du championnat britannique side-cars, au sein du fabuleux championnat anglais de Ssuperbike, le BSB, courue les 19 et 20 octobre 2019 devant une foule extraordinaire. Ce championnat side, se déroule sur 10 épreuves, qui comprend 21 courses au total.
+                Il a vu le très jeune Todds Ellis, 22 ans devenir champion de Grande-Bretagne side-car. On rappelle que leur championnat est en 600, et que si on veut faire un résultat, il faut un châssis long. D’ailleurs, pas compliqué, il n’y que des longs à Brands Hatch.
+                Le championnat britannique est ce qui se fait de mieux. De jeunes pilotes, citons les : Todd Ellis, Steve Kershaw, Ricky Stevens, Tommy Philp, Ryan Crowe, des anciens qui savent tourner la poignée : John Holden, Chris Walker, sans oublier Tim Reeves, Tom Birchall et Sam Christie, absents à Brands Hatch pour cause de Mondial à Estoril.
+
+                Saluons aussi les sponsors qui permettent à ces stars de briller ainsi que le spectacle offert..</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-4 section-container">
+          <div class="section">
+            <div class="section-title">
+              <span>Tourist Trophy</span>
+            </div>
+            <div class="divider-yellow"></div>
+
+            <div class="section-article">
+              <div class="section-img" style="background-image:url(img/001.jpg)"></div>
+              <div class="section-info">
+                <p><b>10 Juin 2019</b></p>
+                <p>Peter Hickman domine le Tourist Trophy 2019</p>
+              </div>
+            </div>
+
+            <div class="divider-grey"></div>
+
+            <div class="section-article">
+              <div class="section-img" style="background-image:url(img/002.jpg)"></div>
+              <div class="section-info">
+                <p><b>4 Juin 2019</b></p>
+                <p>La galerie de la course du lundi 4 Juin 2019</p>
+              </div>
+            </div>
+
+            <div class="divider-grey"></div>
+
+            <div class="section-article">
+              <div class="section-img" style="background-image:url(img/003.jpg)"></div>
+              <div class="section-info">
+                <p><b>14 Novembre 2018</b></p>
+                <p>Le calendrier des courses du Tourist Trophy 2019</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <div class="section-title">
+              <span>EWC</span>
+            </div>
+
+            <div class="divider-yellow"></div>
+
+            <div class="section-article">
+              <div class="section-img" style="background-image:url(img/004.jpg)"></div>
+              <div class="section-info">
+                <p><b>21 Avril 2019</b></p>
+                <p>Kawazaki SRC renoue avec la victoire aux 24H du Mans moto</p>
+              </div>
+            </div>
+
+            <div class="divider-grey"></div>
+
+            <div class="section-article">
+              <div class="section-img" style="background-image:url(img/005.jpg)"></div>
+              <div class="section-info">
+                <p><b>21 Avril 2019</b></p>
+                <p>Le "nouveau" projet Metiss 2019</p>
+              </div>
+            </div>
+
+            <div class="divider-grey"></div>
+
+            <div class="section-article">
+              <div class="section-img" style="background-image:url(img/006.jpg)"></div>
+              <div class="section-info">
+                <p><b>21 Avril 2019</b></p>
+                <p>24H Motos 2019 : 3 machines pour une victoire à 5 heures de l'arrivée</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-md-offset-3 col-lg-offset-3 col-left">
+          <span class="footer-link"><a href="#">Plan du site</a></span>
+          <span class="footer-link"><a href="index_redesign.html">Accueil</a> | <a href="mailto:damien.bunlet@isep.fr">Contact</a></span>
+          <span>redaction@cybermotard.com</span>
+          <span>Textes et images par l'équipe de Cybermotard.com</span>
+          <span>&copy; Copyright 1998 - 2019</span>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          <div class="newsletter">
+            <form action="">
+              <span><i class="fas fa-envelope"></i>Newsletter</span>
+              <input type="email" placeholder="Email" name="email">
+              <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
+          <div class="external">
+            <a href="#"><i class="fas fa-rss-square fa-3x"></i></a>
+            <a href="https://www.facebook.com/Cybermotard-317604139801/"><i class="fab fa-facebook-square fa-3x"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript">
+    // Navigation
+    var dropdown = document.getElementsByClassName("btn-dropdown");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block") {
+          dropdownContent.style.display = "none";
+        } else {
+          dropdownContent.style.display = "block";
+        }
+      });
+    }
+
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+    }
+
+    window.onscroll = function() {myFunction()};
+
+    var navbar = document.getElementById("myNavbar");
+    var sticky = navbar.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        navbar.classList.add("sticky")
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    }
+  </script>
+
+</body>
+</html>

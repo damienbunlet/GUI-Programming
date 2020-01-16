@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" class="ls">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://kit.fontawesome.com/c55ffa2d10.js" crossorigin="anonymous"></script>
+</head>
+<body class="ls">
+
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="btn-close" onclick="closeNav()">&times;</a>
+    <a href="/home">Go back</a>
+    <a href="/lissajous" class="active"><i class="fas fa-chart-area"></i> Lissajous</a>
+    <a href="/redesign"><i class="fas fa-drafting-compass"></i> Redesign</a>
+    <a href="/game"><i class="fas fa-gamepad"></i> Tic Tac Toe</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="container">
+
+    <!-- Navbar -->
+    <div id="myNavbar" class="navbar">
+      <span class="btn-menu" onclick="openNav()"><i class="fas fa-bars fa-lg"></i> Menu</span>
+      <span>Lissajous <i class="fas fa-chart-area"></i></span>
+    </div>
+
+    <!-- Content -->
+    <div class="content row">
+      <!-- First column -->
+      <div class="col-xs-10 col-xs-offset-1">
+        <div class="description">
+          <h1>Lissajous</h1>
+          <h5>Named after Jules Antoine Lissajous, Lissajous curve, also know as lissajous figure or Bowditch curve, is the graph of a system of parametric equations which describe complex harmonic motion.</h5>
+          <p>A Lissajous curve can be always define by the following parametric equation :</p>
+          <p lang="latex" class="center">x(t)=a*sin(t)</p>
+          <p lang="latex" class="center">y(t)=a*sin(nt+\phi)</p>
+          <p class="center">where : <span lang="latex">0\leq\phi\leq\frac{\pi}{2}</span></p>
+          <p class="center">and : <span lang="latex">n\geq 1</span></p>
+          <p>The number <span lang="latex">n</span> is called the <i>parameter</i> of the curve, and corresponds to the ratio of the pulsations of the two sinusoidal movements. Moreover, if this ratio is rational, it can be expressed in the form <span lang="latex">n=\frac{q}{p}</span> and the parametric equation of the curve becomes:</p>
+          <p lang="latex" class="center">x(\theta)=a.sin(p\theta)</p>
+          <p lang="latex" class="center">y(\theta)=b*sin(q\theta+\phi)</p>
+          <p class="center">where : <span lang="latex">0\leq\phi\leq\frac{\pi}{2p}</span></p>
+          <p class="center">and : <span lang="latex">q\geq p</span></p>
+          <p class="center">with : <span lang="latex">0\leq\theta\leq 2\pi</span></p>
+          <p class="center">and : <span lang="latex">\theta=\frac{\alpha *2\pi}{360}</span></p>
+        </div>
+        <div class="var">
+          <h5>Choose your values from the previous equation :</h5>
+          <input id="a" type="number" name="a" value="" placeholder="a">
+          <input id="b" type="number" name="b" value="" placeholder="b">
+          <input id="p" type="number" name="p" value="" placeholder="p">
+          <input id="q" type="number" name="q" value="" placeholder="q">
+          <input id="angle" type="number" name="angle" value="" placeholder="&#945;" min="0" max="90">
+        </div>
+        <div class="error">
+          <p id="alert-int" class="alert">All values must be given.</p>
+          <p id="alert-phi" class="alert">The value of <strong>&#945;</strong> isn't in range <strong>[0;&pi;/2p]</strong>.</p>
+          <p id="alert-p" class="alert">The value of <strong>p</strong> must be less than or equal to <strong>q</strong>.</p>
+        </div>
+
+        <div class="graph-container">
+          <div id="graph">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/plotly-latest.min.js"></script>
+  <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+
+  <script type="text/javascript">
+
+  //Graphic
+  const ints = document.querySelectorAll('input');
+
+  const layout = {
+    xaxis: {
+      range: [-2, 2]
+    },
+    yaxis: {
+      range: [-2, 2]
+    },
+    title: 'Generation of Lissajous curve!',
+    autosize: false,
+    width: 900,
+    height: 750,
+  };
+
+  function renderPlot(x,y) {
+    Plotly.newPlot(
+      'graph',
+      [{
+        x: x,
+        y: y,
+        line: {
+          simplify: false
+        }
+      }],
+      layout,
+      {
+        responsive: true
+      }
+    );
+  }
+
+  function generateFigure() {
+    var a = $('#a').val();
+    var b = $('#b').val();
+    var p = $('#p').val();
+    var q = $('#q').val();
+    var angle = $('#angle').val();
+
+    let xArr = [];
+    let yArr = [];
+
+    var phi = (angle * 2 * Math.PI) / 360;
+
+    /* Check if alpha is in range [0;2pi] */
+    if (!(phi >= 0) || !(phi <= (Math.PI / (2 * p)))) {
+      $('#alert-phi').addClass('alert-show');
+    }
+    else {
+      $('#alert-phi').removeClass('alert-show');
+    }
+
+    /* Check if p <= q */
+    if (+p > +q) {
+      $('#alert-p').addClass('alert-show');
+    }
+    else {
+      $('#alert-p').removeClass('alert-show');
+    }
+
+    /* Check if all values are given */
+    if ($('#a').val() == '' || $('#b').val() == '' || $('#p').val() == ''|| $('#q').val() == '' || $('#angle').val() == '') {
+      $('#alert-int').addClass('alert-show');
+    }
+    else {
+      $('#alert-int').removeClass('alert-show');
+    }
+
+    if (a && b && p && q && angle && (+phi >= 0) && (+phi <= +(Math.PI / (2 * p))) && (+p <= +q)) {
+      for (let j = 0; j <= 2 * Math.PI; j += Math.PI / 720) {
+        xArr.push(a * Math.sin(p * j));
+        yArr.push(b * Math.sin((q * j) + phi));
+      }
+    }
+
+    renderPlot(xArr, yArr);
+
+  }
+
+  ints.forEach(int => int.addEventListener('change', generateFigure));
+
+  renderPlot();
+
+  // Navigation
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "100%";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+  }
+
+  window.onscroll = function() {myFunction()};
+
+  var navbar = document.getElementById("myNavbar");
+  var sticky = navbar.offsetTop;
+
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+  }
+  </script>
+</body>
+</html>
