@@ -102,7 +102,7 @@
     }
 
     .sticky + .content {
-      padding-top: 5em
+      padding-top: 4em
     }
 
     .content {
@@ -131,14 +131,20 @@
 
         #col-player {
           width: 100%;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center;
+
           a {
             color: #FFFFFF;
             background-color: #2E66A8;
             display: block;
-            border-radius: 10px;
             text-decoration: none;
             padding: 32px;
-
+            width: calc(100% - 128px);
+            margin: 16px 0;
 
             #col-one-player, #col-two-player {
               display: flex;
@@ -163,14 +169,6 @@
             }
           }
         }
-
-        #one-player {
-          margin-right: 8px;
-        }
-
-        #two-player {
-          margin-left: 8px;
-        }
       }
 
       .game {
@@ -192,8 +190,9 @@
             align-items: center;
             border-color: #111111;
             border-style: solid;
-            border-radius: 10px;
             border-width: thin;
+            padding: 16px 0;
+            width: calc(100% - 32px);
 
             &.current {
               background-color: #2E66A8;
@@ -228,7 +227,6 @@
               border-color: #111111;
               border-style: solid;
               border-width: thin;
-              border-radius: 10px;
 
               i {
                 position: absolute;
@@ -264,7 +262,6 @@
           margin-top: 16px;
           display: block;
           border: none;
-          border-radius: 10px;
           height: 64px;
           min-width: 128px;
           background-color: #2E66A8;

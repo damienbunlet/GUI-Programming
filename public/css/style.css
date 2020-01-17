@@ -1453,7 +1453,7 @@ h6 {
       top: 0;
       width: calc(100% - 4em); }
     .gm .container .sticky + .content {
-      padding-top: 5em; }
+      padding-top: 4em; }
     .gm .container .content {
       height: calc(100% - 4em);
       display: flex;
@@ -1473,14 +1473,20 @@ h6 {
         .gm .container .content .choose-player h1 {
           margin-bottom: 16px; }
         .gm .container .content .choose-player #col-player {
-          width: 100%; }
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: center;
+          align-items: center; }
           .gm .container .content .choose-player #col-player a {
             color: #FFFFFF;
             background-color: #2E66A8;
             display: block;
-            border-radius: 10px;
             text-decoration: none;
-            padding: 32px; }
+            padding: 32px;
+            width: calc(100% - 128px);
+            margin: 16px 0; }
             .gm .container .content .choose-player #col-player a #col-one-player, .gm .container .content .choose-player #col-player a #col-two-player {
               display: flex;
               flex-direction: column;
@@ -1494,10 +1500,6 @@ h6 {
                 text-transform: uppercase; }
             .gm .container .content .choose-player #col-player a:hover {
               background-color: #4392F1; }
-        .gm .container .content .choose-player #one-player {
-          margin-right: 8px; }
-        .gm .container .content .choose-player #two-player {
-          margin-left: 8px; }
       .gm .container .content .game {
         display: flex;
         flex-direction: column;
@@ -1515,8 +1517,9 @@ h6 {
             align-items: center;
             border-color: #111111;
             border-style: solid;
-            border-radius: 10px;
-            border-width: thin; }
+            border-width: thin;
+            padding: 16px 0;
+            width: calc(100% - 32px); }
             .gm .container .content .game #col-game #player-one.current, .gm .container .content .game #col-game #player-two.current {
               background-color: #2E66A8;
               color: #FFFFFF;
@@ -1540,8 +1543,7 @@ h6 {
               position: relative;
               border-color: #111111;
               border-style: solid;
-              border-width: thin;
-              border-radius: 10px; }
+              border-width: thin; }
               .gm .container .content .game #col-game #board #case-11 i, .gm .container .content .game #col-game #board #case-12 i, .gm .container .content .game #col-game #board #case-13 i,
               .gm .container .content .game #col-game #board #case-21 i, .gm .container .content .game #col-game #board #case-22 i, .gm .container .content .game #col-game #board #case-23 i,
               .gm .container .content .game #col-game #board #case-31 i, .gm .container .content .game #col-game #board #case-32 i, .gm .container .content .game #col-game #board #case-33 i {
@@ -1571,7 +1573,6 @@ h6 {
           margin-top: 16px;
           display: block;
           border: none;
-          border-radius: 10px;
           height: 64px;
           min-width: 128px;
           background-color: #2E66A8;

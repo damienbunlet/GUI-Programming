@@ -63,15 +63,15 @@ function init() {
     player1 = 'X';
     player2 = 'O';
     currentPlayer = player1;
-    $("#player-one-symbol").append("<i class='fas fa-times-circle fa-5x'></i>");
-    $("#player-two-symbol").append("<i class='fas fa-dot-circle fa-5x'></i>");
+    $("#player-one-symbol").append("<i class='fas fa-times-circle fa-3x'></i>");
+    $("#player-two-symbol").append("<i class='fas fa-dot-circle fa-3x'></i>");
   }
   else {
     player1 = 'O';
     player2 = 'X';
     currentPlayer = player2;
-    $("#player-one-symbol").append("<i class='fas fa-dot-circle fa-5x'></i>");
-    $("#player-two-symbol").append("<i class='fas fa-times-circle fa-5x'></i>");
+    $("#player-one-symbol").append("<i class='fas fa-dot-circle fa-3x'></i>");
+    $("#player-two-symbol").append("<i class='fas fa-times-circle fa-3x'></i>");
   }
 
   if (currentPlayer == player1) {

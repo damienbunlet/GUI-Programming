@@ -31,18 +31,17 @@
     <div class="content">
 
       <div class="choose-player">
-        <h1>Select players :</h1>
         <div id="col-player" class="row">
-          <a id="one-player" class="col-xs-12 col-lg-3 col-lg-offset-3" onclick="players(1)">
+          <a id="one-player" onclick="players(1)" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-4">
             <div id="col-one-player">
-              <i class="fas fa-user fa-10x"></i>
+              <i class="fas fa-user fa-5x"></i>
               <span>Player 1</span>
               <span>Computer</span>
             </div>
           </a>
-          <a id="two-player" class="col-xs-12 col-lg-3" onclick="players(2)">
+          <a id="two-player" onclick="players(2)" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-4">
             <div id="col-two-player">
-              <i class="fas fa-user-friends fa-10x"></i>
+              <i class="fas fa-user-friends fa-5x"></i>
               <span>Player 1</span>
               <span>Player 2</span>
             </div>
@@ -51,14 +50,13 @@
       </div>
 
       <div class="game">
-        <h1>Tic Tac Toe Game</h1>
         <div id="col-game" class="row">
-          <div id="player-one" class="col-xs-12 col-lg-2 col-lg-offset-2">
+          <div id="player-one" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-4">
             <span id="player-one-name"></span>
             <span id="player-one-symbol"></span>
             <span id="player-one-turn">It's your turn</span>
           </div>
-          <div id="board" class="col-xs-12 col-lg-4">
+          <div id="board" class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
 
               <div class="col" id="case-11" onclick="mousePressed(1,1)"></div>
               <div class="col" id="case-12" onclick="mousePressed(1,2)"></div>
@@ -75,7 +73,7 @@
               <div class="col" id="case-33" onclick="mousePressed(3,3)"></div>
             </div>
 
-          <div id="player-two" class="col-xs-12 col-lg-2">
+          <div id="player-two" class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-4 col-lg-offset-4">
             <span id="player-two-name"></span>
             <span id="player-two-symbol"></span>
             <span id="player-two-turn">It's your turn</span>
